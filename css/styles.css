@@ -1,11 +1,13 @@
 /* SNOWJI 2027 */
+@font-face { font-family: "CC Smash"; src: url(../assets/fonts/cc-smash.woff) format("woff"); font-display: swap; }
+@font-face { font-family: "CC Mighty Mouth"; src: url(../assets/fonts/cc-mighty-mouth.woff) format("woff"); font-display: swap; }
 :root {
   --snow: #F6F7F9;
   --snow-2: #ECEFF3;
   --card: #FFFFFF;
   --ink: #0D1B2A;
   --ink-2: #44515F;
-  --ink-3: #6E7A88;
+  --ink-3: #5F6B79;
   --line: #DDE3E9;
   --flare: #F0532F;
   --sky: #0B5A8A;
@@ -18,10 +20,9 @@
   --radius: 22px;
   --nav-h: 68px;
 
-  /* CC Smash Open + CC Mighty Mouth Variable come from an Adobe Fonts web project (see README). Until that kit is
-     linked in the <head>, the page falls back to Bangers and Inter. */
-  --display: "cc-smash", "Bangers", "Impact", ui-sans-serif, system-ui, sans-serif;
-  --body: "cc-mighty-mouth-variable", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* Headings: CC Smash. Text: CC Mighty Mouth (self-hosted below). Bangers/Inter only fill missing glyphs (· →). */
+  --display: "CC Smash", "Bangers", "Impact", ui-sans-serif, system-ui, sans-serif;
+  --body: "CC Mighty Mouth", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   color-scheme: light;
 }
 
@@ -256,8 +257,11 @@ h3 { letter-spacing: .03em; }
   :root { --lane: 54px; --gutter: 18px; --pad: 76px; --nav-h: 60px; }
   body { font-size: 1rem; }
   .brand-event { font-size: 1rem; }
-  .hero h1 { font-size: 25vw; }
+  .hero h1 { font-size: 22vw; }
   .hero h1 span { display: block; }
+  /* Keep the button and price clear of the skier: sit them on the snow above the strip */
+  .hero-copy { position: static; }
+  .hero-cta { position: absolute; left: var(--gutter); right: var(--gutter); bottom: 78px; margin: 0; }
   .soji-mark { width: 50px; height: 18px; }
   .gate { height: 42px; width: 2px; top: calc(var(--pad) * .1); }
   .run[data-side="left"] .gate { left: calc(50% + 6px); }
