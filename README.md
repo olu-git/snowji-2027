@@ -15,7 +15,7 @@ assets/fonts/     CC Smash (headings) and CC Mighty Mouth (text), converted to W
 
 **Deploy:** GitHub Pages from `main` (repo `olu-git/snowji-2027`), served at https://snowji.soji.au. Push to `main` and it's live in about a minute.
 
-**Link previews:** `assets/img/share.jpg` (1200×630). Messaging apps cache previews per URL, so after changing it, rename the file and update `og:image` / `twitter:image` in both pages.
+**Link previews:** `assets/img/preview.jpg` (1200×630). Messaging apps cache previews per URL, so after changing it, rename the file and update `og:image` / `twitter:image` in both pages.
 
 **Changing the hero photo:** the skier's position is hard-coded in `js/main.js` (`SKIER`, `ANCHOR`). A new photo needs a new cut-out and new numbers.
 
