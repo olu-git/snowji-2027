@@ -21,3 +21,11 @@ assets/img/       hero.webp (with skier), hero-clean.webp (skier removed), skier
 - Whether the ski bus is extra for the extra snow day and extra night session. The site doesn't mention the bus on the home page.
 - Coronet Peak for the night session is named only in the FAQ.
 - The two activities aren't named anywhere yet.
+
+## Fonts (Adobe Fonts)
+
+Headings use **CC Smash** (Open style) and body text uses **CC Mighty Mouth Variable**, both from Adobe Fonts. Until the kit is linked, the site falls back to Bangers and Inter.
+
+1. At fonts.adobe.com, add CC Smash and CC Mighty Mouth Variable to a **Web Project**, with `snowji.soji.au` as the domain.
+2. Copy the project's `<link rel="stylesheet" href="https://use.typekit.net/XXXXXXX.css">` into the `<head>` of `index.html` and `faq.html`, above `css/styles.css`.
+3. Check the CSS family names Adobe shows. The stylesheet expects `cc-smash` and `cc-mighty-mouth-variable` (`--display` and `--body` in `css/styles.css`).
