@@ -29,7 +29,6 @@
   const canvas = document.querySelector('.powder');
   const ctx = canvas.getContext('2d');
   const nav = document.getElementById('nav');
-  const dock = document.getElementById('dock');
 
   let X = new Float32Array(0), Y = X, YM = X, L = X, total = 0;
   let S = { x: 0, y: 0 }, F = { x: 0, y: 0 };
@@ -332,11 +331,10 @@
     rebuildRaf = requestAnimationFrame(() => { build(); kick(); });
   }
 
-  /* ── Nav + dock ───────────────────────────────────── */
+  /* ── Nav ─────────────────────────────────────────── */
   let finishInView = false;
   function chrome() {
     nav.classList.toggle('scrolled', scrollY > 60);
-    if (dock) dock.classList.toggle('show', scrollY > innerHeight * 0.75 && !finishInView);
   }
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(([e]) => { finishInView = e.isIntersecting; chrome(); }, { threshold: 0.15 }).observe(finish);
